@@ -1,15 +1,18 @@
-package com.devsuperior.desafio1.service;
+package com.devsuperior.desafio1.services;
+
+import org.springframework.stereotype.Service;
 
 import com.devsuperior.desafio1.entities.Order;
 
+@Service
 public class ShippingService {
 	// Atributo
 	private Order order;
 	
 	// Método Construtor
-	public ShippingService(Order order) {
-		this.order = order;
-	}
+	//public ShippingService(Order order) {
+	//	this.order = order;
+	//}
 	
 	// Método
 	public double shipment(Order order) {
