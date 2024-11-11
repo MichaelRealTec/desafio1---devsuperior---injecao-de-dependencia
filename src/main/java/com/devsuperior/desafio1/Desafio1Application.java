@@ -10,7 +10,7 @@ import com.devsuperior.desafio1.services.OrderService;
 @SpringBootApplication
 @ComponentScan({"com.devsuperior"})
 public class Desafio1Application implements CommandLineRunner { // Apresentar mensagem no terminal   (implements CommandLineRunner)
-
+	
 	private OrderService orderService;
 	
 	public Desafio1Application(OrderService orderService) {
