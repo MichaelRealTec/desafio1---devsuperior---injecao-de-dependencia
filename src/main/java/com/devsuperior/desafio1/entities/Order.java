@@ -6,6 +6,7 @@ public class Order {
 	private Double basic;
 	private Double discount;
 	
+	
 	// Método Getter e Setter
 	public void setCode(Integer code) {
 		this.code = code;

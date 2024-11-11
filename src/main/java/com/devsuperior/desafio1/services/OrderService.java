@@ -8,15 +8,15 @@ import com.devsuperior.desafio1.entities.Order;
 @Service
 public class OrderService {
 	// Atributo
-	@Autowired
-	private Order order;
+	//@Autowired
+	//private Order order;
 	@Autowired
 	private ShippingService shippingService;
 	
 	// Método Construtor
-	//public OrderService(Order order) {
-	//	this.order = order;
-	//}
+	public OrderService(ShippingService shippingService) {
+		this.shippingService = shippingService;
+	}
 	
 	// Método
 	public double total(Order order) {
