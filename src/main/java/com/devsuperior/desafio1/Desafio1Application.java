@@ -42,6 +42,8 @@ public class Desafio1Application implements CommandLineRunner { // Apresentar me
 		Double discount = sc.nextDouble();
 		
 		order = new Order(code, basic, discount);
+		shippingService = new ShippingService();
+		orderService = new OrderService(shippingService);
 		//OrderService orderService = new OrderService("")
 		//Desafio1Application desafio1Application = new Desafio1Application(Order order);
 		
@@ -49,8 +51,8 @@ public class Desafio1Application implements CommandLineRunner { // Apresentar me
 		 
 		System.out.println("Pedido código " + order.getCode());
 		//double frete2 = orderService.total(order) + shippingService.shipment(order);
-		//System.out.println("Valor total: R$ " + frete2);
-		System.out.println("valor do frete = R$ " + shippingService.shipment(order));
+		System.out.printf("Valor total: R$ %.2f", (orderService.total(order) + shippingService.shipment(order)));
+		//System.out.println("valor do frete = R$ " + shippingService.shipment(order));
 		
 		sc.close();
 		
