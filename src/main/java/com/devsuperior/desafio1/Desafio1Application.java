@@ -46,7 +46,6 @@ public class Desafio1Application implements CommandLineRunner { // Apresentar me
 		System.out.printf("Valor total: R$ %.2f", orderService.total(order3));
 		
 		
-	
 		// Solucao alternativa
 		/*
 		Locale.setDefault(Locale.US);
