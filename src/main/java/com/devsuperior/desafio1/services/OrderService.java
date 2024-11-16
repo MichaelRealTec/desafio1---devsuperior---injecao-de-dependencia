@@ -20,6 +20,9 @@ public class OrderService {
 	
 	// Método
 	public double total(Order order) {
+		if(order.getBasic() > 0) {
+			return order.getBasic() - order.getBasic() * (order.getDiscount() / 100) + shippingService.shipment(order);
+		}
 		return order.getBasic() - order.getBasic() * (order.getDiscount() / 100);
 	}
 	

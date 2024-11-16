@@ -18,7 +18,7 @@ public class Desafio1Application implements CommandLineRunner { // Apresentar me
 	
 	
 	private OrderService orderService;
-	private Order order;
+	private Order order; 
 	private ShippingService shippingService;
 	
 	public Desafio1Application(OrderService orderService) {
@@ -33,6 +33,22 @@ public class Desafio1Application implements CommandLineRunner { // Apresentar me
 	public void run(String... args) throws Exception {
 		// Desafio 1 - DevSuperior - injeção de dependencia
 		
+		Order order1 = new Order(1034, 150.0, 20.0);
+		System.out.println("Pedido código " + order1.getCode());
+		System.out.printf("Valor total: R$ %.2f\n", (orderService.total(order1)));
+		
+		Order order2 = new Order(2282, 800.0, 10.0);
+		System.out.println("Pedido código " + order2.getCode());
+		System.out.printf("Valor total: R$ %.2f\n", orderService.total(order2));
+		
+		Order order3 = new Order(1309, 95.90, 0.0);
+		System.out.println("Pedido código " + order3.getCode());
+		System.out.printf("Valor total: R$ %.2f", orderService.total(order3));
+		
+		
+	
+		// Solucao alternativa
+		/*
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
@@ -55,7 +71,7 @@ public class Desafio1Application implements CommandLineRunner { // Apresentar me
 		//System.out.println("valor do frete = R$ " + shippingService.shipment(order));
 		
 		sc.close();
-		
+		*/
 	}
 
 }

@@ -17,7 +17,7 @@ public class ShippingService {
 	
 	// Método
 	public double shipment(Order order) {
-		Double frete = 0.0;
+		double frete = 0.0;
 		if(order.getBasic() < 100.00) {
 			frete = 20.00;
 		} else if(order.getBasic() > 100 && order.getBasic() < 200.00) {
